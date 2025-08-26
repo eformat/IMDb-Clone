@@ -11,7 +11,7 @@ const About = () => {
           open the source image in your browser for easy download.
         </p>
         <p className="my-4">
-          The icons are indexed and loaded from RedHat's Adobe suite. We use a
+          The icons are indexed and loaded from RedHat&apos;s Adobe suite. We use a
           vision language AI model to create text representations of each icon so
           that you can search against a late interaction model that runs on a GPU (its super fast !).
           Use the Search Keywords to hone in on the icons you want.
