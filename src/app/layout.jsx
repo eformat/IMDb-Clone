@@ -6,8 +6,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import SearchBox from "@/components/Search/SearchBox";
 
 export const metadata = {
-  title: "IMDb",
-  description: "Create IMDb clone by next.js and tailwind css",
+  title: "RedHat Icon Finder",
+  description: "RedHat Icon Finder using next.js and tailwind css",
 };
 
 export default function RootLayout({ children }) {
