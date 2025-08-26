@@ -38,7 +38,7 @@ const MoviePage = async ({ params }) => {
         />
         <div className="sm:w-9/12">
           <h2 className="text-2xl font-bold text-red-500 mb-2">
-            <a href={`http://127.0.0.1:5000/${data.backdrop_path || data.poster_path}`} download={data.title || data.original_title}>{data.title || data.original_title}</a>
+            <a href={`http://127.0.0.1:5000${data.backdrop_path || data.poster_path}`} target="_blank" download={data.title || data.original_title}>{data.title || data.original_title}</a>
           </h2>
           <p className="mt-2">
             <span className="text-xl font-semibold text-red-500 mr-1">
