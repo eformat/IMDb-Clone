@@ -46,7 +46,7 @@ const MoviePage = async ({ params }) => {
             </span>
             {data.overview}
           </p>
-          <p className="mt-2">
+          {/* <p className="mt-2">
             <span className="text-xl font-semibold text-red-500 mr-1">
               Production country:
             </span>
@@ -57,13 +57,13 @@ const MoviePage = async ({ params }) => {
               Date Released:
             </span>
             {data.release_date}
-          </p>
+          </p> */}
           <div className="flex items-center mt-2 flex-wrap">
             <p className="flex items-center mr-8 mb-2">
               <AiFillStar className="text-amber-500 mr-1 text-xl" />
               {Number(data.vote_average).toFixed(1)}
             </p>
-            {data.revenue !== 0 && (
+            {/* {data.revenue !== 0 && (
               <p className="mr-8 flex items-center mb-2">
                 <BsCurrencyDollar className="mr-1 text-xl text-green-500" />
                 {data.revenue.toLocaleString("en-Us")}
@@ -72,7 +72,7 @@ const MoviePage = async ({ params }) => {
             <p className="mr-8 flex items-center mb-2">
               <BiTimeFive className="mr-1 text-xl text-red-500" />
               {data.runtime} Minutes
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

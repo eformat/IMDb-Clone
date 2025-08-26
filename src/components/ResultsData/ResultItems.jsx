@@ -27,7 +27,7 @@ const ResultItems = ({ results }) => {
             {results?.title || results?.original_title}
           </h2>
           <div className="flex justify-between items-center flex-wrap">
-            <p className="mt-1">{results?.release_date}</p>
+            {/* <p className="mt-1">{results?.release_date}</p> */}
             <p className="flex items-center mt-1 mx-1">
               <FaRegThumbsUp className="mr-1 text-red-500" />
               {results?.vote_count}
