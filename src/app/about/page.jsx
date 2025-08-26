@@ -13,8 +13,8 @@ const About = () => {
         <p className="my-4">
           The icons are indexed and loaded from RedHat's Adobe suite. We use a
           vision language AI model to create text representations of each icon so
-          that you can search against the index that runs on a GPU (its super fast !). Use
-          the Search Keywords to hone in on the icons you want.
+          that you can search against a late interaction model that runs on a GPU (its super fast !).
+          Use the Search Keywords to hone in on the icons you want.
         </p>
         <p>
           Thank you for visiting the website and we hope you enjoy your time

@@ -14,11 +14,11 @@ const Home = async ({ searchParams }) => {
 
   const res = await fetch(
     //`https://api.themoviedb.org/3/${pageParamsCheck}?api_key=${process.env.API_KEY}&language=en-Us&page=${pageNumber}`,
-    `http://127.0.0.1:5000/items`,
+    `http://127.0.0.1:5000/items?pageNumber=${pageNumber}`,
     { next: { revalidate: 0 } }
   );
 
-  if (!res.ok) throw new Error("Failed to fetch data!");
+  if (!res.ok) throw new Error("Failed to fetch icon data!");
 
   const data = await res.json();
 

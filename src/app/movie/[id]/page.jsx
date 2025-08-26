@@ -14,7 +14,7 @@ const MoviePage = async ({ params }) => {
       { cache: 'no-store' }
     );
 
-    if (!api.ok) throw new Error("Can not fetching the movie data!");
+    if (!api.ok) throw new Error("Can not fetching the icon data!");
 
     const data = await api.json();
     //console.log(data)

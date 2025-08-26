@@ -9,10 +9,10 @@ const Search = async ({ params, searchParams }) => {
   const searchApi = await fetch(
     //`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${searchWord}&language=en-US&page=${pageNumber}&include_adult=false`
     //`http://127.0.0.1:5000/items`
-    `http://127.0.0.1:5000/search/${searchWord}`
+    `http://127.0.0.1:5000/search/${searchWord}?pageNumber=${pageNumber}`
   );
 
-  if (!searchApi.ok) throw new Error("There is no movie with this keyword!");
+  if (!searchApi.ok) throw new Error("There is no icon with this keyword!");
 
   const data = await searchApi.json();
 
