@@ -13,7 +13,8 @@ const Home = async ({ searchParams }) => {
   if (page === "fetchTrending") pageParamsCheck = "trending/movie/week";
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/${pageParamsCheck}?api_key=${process.env.API_KEY}&language=en-Us&page=${pageNumber}`,
+    //`https://api.themoviedb.org/3/${pageParamsCheck}?api_key=${process.env.API_KEY}&language=en-Us&page=${pageNumber}`,
+    `http://127.0.0.1:5000/items`,
     { next: { revalidate: 0 } }
   );
 

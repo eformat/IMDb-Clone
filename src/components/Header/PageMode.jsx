@@ -20,12 +20,12 @@ const PageMode = () => {
     <div className="text-xl">
       {mounted && currentTheme === "dark" ? (
         <MdLightMode
-          className="cursor-pointer hover:text-cyan-500"
+          className="cursor-pointer hover:text-red-500"
           onClick={lightThemeHandler}
         />
       ) : (
         <BsFillMoonFill
-          className="cursor-pointer hover:text-cyan-500"
+          className="cursor-pointer hover:text-red-500"
           onClick={darkThemeHandler}
         />
       )}

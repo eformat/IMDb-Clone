@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           <SearchBox />
 
           {children}
-          <Analytics />
+          {/*<Analytics /> */}
         </Provider>
       </body>
     </html>

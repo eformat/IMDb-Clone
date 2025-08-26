@@ -37,16 +37,16 @@ const Pagination = ({ totalPages, currentPage }) => {
       {pageNumber > 1 && (
         <MdKeyboardArrowLeft
           onClick={pageBackHandler}
-          className="w-10 h-10 rounded-lg bg-cyan-500 text-white flex items-center justify-center cursor-pointer transition duration-150 hover:bg-cyan-700"
+          className="w-10 h-10 rounded-lg bg-red-500 text-white flex items-center justify-center cursor-pointer transition duration-150 hover:bg-red-700"
         />
       )}
-      <span className="mx-5 mb-2 p-1 border-b-4 border-cyan-500 text-3xl font-semibold select-none text-cyan-500">
+      <span className="mx-5 mb-2 p-1 border-b-4 border-red-500 text-3xl font-semibold select-none text-red-500">
         {pageNumber}
       </span>
       {pageNumber < totalPages && (
         <MdKeyboardArrowRight
           onClick={pageForwardHandler}
-          className="w-10 h-10  rounded-lg bg-cyan-500 text-white flex items-center justify-center cursor-pointer transition duration-150 hover:bg-cyan-700"
+          className="w-10 h-10  rounded-lg bg-red-500 text-white flex items-center justify-center cursor-pointer transition duration-150 hover:bg-red-700"
         />
       )}
     </div>

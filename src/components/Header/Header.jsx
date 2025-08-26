@@ -17,10 +17,10 @@ const Header = () => {
         <PageMode />
         <Link href="/">
           <h2>
-            <span className="text-2xl bg-cyan-500 px-2 py-1 rounded-lg text-white font-bold mr-1">
-              IMDb
+            <span className="text-2xl bg-red-500 px-2 py-1 rounded-lg text-white font-bold mr-1">
+              RedHat Icon
             </span>
-            <span className="text-xl hidden sm:inline">Clone</span>
+            <span className="text-xl hidden sm:inline">Finder</span>
           </h2>
         </Link>
       </div>

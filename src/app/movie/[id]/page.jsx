@@ -9,20 +9,26 @@ const MoviePage = async ({ params }) => {
 
   try {
     const api = await fetch(
-      `https://api.themoviedb.org/3/movie/${paramsId}?api_key=${process.env.API_KEY}`
+      //`https://api.themoviedb.org/3/movie/${paramsId}?api_key=${process.env.API_KEY}`
+      `http://127.0.0.1:5000/items/${paramsId}?api_key=${process.env.API_KEY}`,
+      { cache: 'no-store' }
     );
 
     if (!api.ok) throw new Error("Can not fetching the movie data!");
 
     const data = await api.json();
+    //console.log(data)
 
     return (
       <div className="p-6 flex flex-col lg:flex-row items-center content-center mt-12 max-w-6xl mx-auto ">
         <Image
           className="rounded-lg mb-4 sm:mr-4"
-          src={`https://image.tmdb.org/t/p/w500${
-            data.backdrop_path || data.poster_path
+          src={`http://127.0.0.1:5000/${
+              data.backdrop_path || data.poster_path
           }`}
+          //src={`https://image.tmdb.org/t/p/w500${
+          //  data.backdrop_path || data.poster_path
+          //}`}
           width={500}
           height={400}
           style={{ maxWidth: "100%", height: "100%" }}
@@ -31,23 +37,23 @@ const MoviePage = async ({ params }) => {
           alt="Movie Image"
         />
         <div className="sm:w-9/12">
-          <h2 className="text-2xl font-bold text-cyan-500 mb-2">
-            {data.title || data.original_title}
+          <h2 className="text-2xl font-bold text-red-500 mb-2">
+            <a href={`http://127.0.0.1:5000/${data.backdrop_path || data.poster_path}`} download={data.title || data.original_title}>{data.title || data.original_title}</a>
           </h2>
           <p className="mt-2">
-            <span className="text-xl font-semibold text-cyan-500 mr-1">
+            <span className="text-xl font-semibold text-red-500 mr-1">
               Overview:
             </span>
             {data.overview}
           </p>
           <p className="mt-2">
-            <span className="text-xl font-semibold text-cyan-500 mr-1">
+            <span className="text-xl font-semibold text-red-500 mr-1">
               Production country:
             </span>
             {data.production_countries[0]?.name || "Not available"}
           </p>
           <p className="mt-2">
-            <span className="text-xl font-semibold text-cyan-500 mr-1">
+            <span className="text-xl font-semibold text-red-500 mr-1">
               Date Released:
             </span>
             {data.release_date}
@@ -64,7 +70,7 @@ const MoviePage = async ({ params }) => {
               </p>
             )}
             <p className="mr-8 flex items-center mb-2">
-              <BiTimeFive className="mr-1 text-xl text-cyan-500" />
+              <BiTimeFive className="mr-1 text-xl text-red-500" />
               {data.runtime} Minutes
             </p>
           </div>

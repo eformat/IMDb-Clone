@@ -11,8 +11,8 @@ const ResultItems = ({ results }) => {
       <Link href={`/movie/${results.id}`}>
         <Image
           className="rounded-t-lg group-hover:opacity-70 transition-opacity duration-200"
-          src={`https://image.tmdb.org/t/p/w500${
-            results?.backdrop_path || results?.poster_path
+          src={`http://127.0.0.1:5000${
+          results?.backdrop_path || results?.poster_path
           }`}
           width={500}
           height={300}
@@ -23,13 +23,13 @@ const ResultItems = ({ results }) => {
         />
         <div className="px-2">
           <p className="mt-2 line-clamp-2">{results?.overview}</p>
-          <h2 className="truncate text-lg font-bold text-cyan-500 my-2">
+          <h2 className="word-break:break-all text-lg font-bold text-red-500 my-2">
             {results?.title || results?.original_title}
           </h2>
           <div className="flex justify-between items-center flex-wrap">
             <p className="mt-1">{results?.release_date}</p>
             <p className="flex items-center mt-1 mx-1">
-              <FaRegThumbsUp className="mr-1 text-cyan-500" />
+              <FaRegThumbsUp className="mr-1 text-red-500" />
               {results?.vote_count}
             </p>
             <p className="flex items-center mt-1">
